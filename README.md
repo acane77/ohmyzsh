@@ -1,3 +1,11 @@
+# Melina's customized oh-my-zsh
+
+```bash
+export REPO=acane77/ohmyzsh
+export BRANCH=melina
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/acane77/ohmyzsh/master/tools/install.sh)
+```
+
 <p align="center"><img src="https://ohmyzsh.s3.amazonaws.com/omz-ansi-github.png" alt="Oh My Zsh"></p>
 
 Oh My Zsh is an open source, community-driven framework for managing your [zsh](https://www.zsh.org/)
