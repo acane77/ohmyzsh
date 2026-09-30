@@ -394,7 +394,7 @@ setup_zshrc() {
 }
 
 setup_custom_plugins() {
-  git clone https://github.com/acane77/zsh-syntax-highlighting $ZSH/custom/plugins
+  git clone https://github.com/acane77/zsh-syntax-highlighting $ZSH/custom/plugins/zsh-syntax-highlighting
 }
 
 setup_shell() {
