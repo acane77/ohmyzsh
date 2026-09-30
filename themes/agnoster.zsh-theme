@@ -203,7 +203,7 @@ prompt_hg() {
 }
 
 function print_current_dir() {
-    curr_dir="$(pwd|sed 's/^\/home\/acane/~/')"
+    curr_dir="$(pwd|sed 's/^\/home\/'"$USER"'/~/')"
     if [ "$curr_dir" != "/" ]; then
         curr_dir="$(echo "$curr_dir"|sed 's/ /:SPACE:/'|tr '/' ' ')"
     fi
