@@ -393,6 +393,10 @@ setup_zshrc() {
   echo
 }
 
+setup_custom_plugins() {
+  git clone https://github.com/acane77/zsh-syntax-highlighting $ZSH/custom/plugins
+}
+
 setup_shell() {
   # Skip setup if the user wants or stdin is closed (not running interactively).
   if [ "$CHSH" = no ]; then
@@ -565,6 +569,7 @@ EOF
   setup_ohmyzsh
   setup_zshrc
   setup_shell
+  setup_custom_plugins
 
   print_success
 
