@@ -3,7 +3,7 @@
 ```bash
 export REPO=acane77/ohmyzsh
 export BRANCH=melina
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/acane77/ohmyzsh/master/tools/install.sh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/acane77/ohmyzsh/melina/tools/install.sh)
 ```
 
 <p align="center"><img src="https://ohmyzsh.s3.amazonaws.com/omz-ansi-github.png" alt="Oh My Zsh"></p>
@@ -100,9 +100,9 @@ command-line with either `curl`, `wget` or another similar tool.
 
 | Method    | Command                                                                                           |
 | :-------- | :------------------------------------------------------------------------------------------------ |
-| **curl**  | `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` |
-| **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`   |
-| **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` |
+| **curl**  | `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/melina/tools/install.sh)"` |
+| **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/melina/tools/install.sh)"`   |
+| **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/melina/tools/install.sh)"` |
 
 Alternatively, the installer is also mirrored outside GitHub. Using this URL instead may be required if you're
 in a country like China or India (for certain ISPs), that blocks `raw.githubusercontent.com`:
@@ -122,7 +122,7 @@ It's a good idea to inspect the install script from projects you don't yet know.
 downloading the install script first, looking through it so everything looks normal, then running it:
 
 ```sh
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/melina/tools/install.sh
 sh install.sh
 ```
 
@@ -134,7 +134,7 @@ If the above URL times out or otherwise fails, you may have to substitute the UR
 ### Plugins
 
 Oh My Zsh comes with a shitload of plugins for you to take advantage of. You can take a look in the
-[plugins](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins) directory and/or the
+[plugins](https://github.com/ohmyzsh/ohmyzsh/tree/melina/plugins) directory and/or the
 [wiki](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) to see what's currently available.
 
 #### Enabling Plugins
@@ -274,7 +274,7 @@ If you're running the Oh My Zsh install script as part of an automated install, 
 shell, and it also won't run `zsh` when the installation has finished.
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/melina/tools/install.sh)" "" --unattended
 ```
 
 If you're in China, India, or another country that blocks `raw.githubusercontent.com`, you may have to
@@ -293,9 +293,9 @@ The install script also accepts these variables to allow the installation of a d
 
   _NOTE: it's incompatible with setting the `REPO` variable. This setting will take precedence._
 
-- `BRANCH` (default: `master`): you can use this setting if you want to change the default branch to be
+- `BRANCH` (default: `melina`): you can use this setting if you want to change the default branch to be
   checked out when cloning the repository. This might be useful for testing a Pull Request, or if you want to
-  use a branch other than `master`.
+  use a branch other than `melina`.
 
 For example:
 
