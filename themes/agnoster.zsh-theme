@@ -203,10 +203,9 @@ prompt_hg() {
 }
 
 function print_current_dir() {
-    curr_dir="$(pwd|sed 's/^\/home\/'"$USER"'/~/')"
-    if [ "$curr_dir" != "/" ]; then
-        curr_dir="$(echo "$curr_dir"|sed 's/ /:SPACE:/'|tr '/' ' ')"
-    fi
+    curr_dir="${PWD#$HOME}"
+    [[ "$curr_dir" != "$PWD" ]] && curr_dir="~/$curr_dir"
+    [[ "$curr_dir" != "/" ]] && curr_dir="$(echo "$curr_dir"|sed 's/ /:SPACE:/'|tr '/' ' ')"
     local index
     index=0
     for seg in $(echo $curr_dir); do
