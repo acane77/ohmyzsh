@@ -203,18 +203,19 @@ prompt_hg() {
 }
 
 function print_current_dir() {
-    curr_dir="${PWD#$HOME}"
-    [[ "$curr_dir" != "$PWD" ]] && curr_dir="~/$curr_dir"
-    [[ "$curr_dir" != "/" ]] && curr_dir="$(echo "$curr_dir"|sed 's/ /:SPACE:/'|tr '/' ' ')"
-    local index
-    index=0
-    for seg in $(echo $curr_dir); do
-        if [[ $(( index % 2 )) == 0 ]]; then
+    local __curr_dir
+    __curr_dir="${PWD#$HOME}"
+    [[ "$__curr_dir" != "$PWD" ]] && __curr_dir=" ~$__curr_dir"
+    [[ "$__curr_dir" != "/" ]] && __curr_dir="$(echo -n ${__curr_dir:1}|xargs -d / -n 1)"
+    local __idx
+    __idx=0
+    echo "$__curr_dir"| while read seg; do 
+      if [[ $(( __idx % 2 )) == 0 ]]; then
             prompt_segment 211 black "$seg"
         else
             prompt_segment 213 black "$seg"
         fi
-        index=$(( index + 1 ))
+        __idx=$(( __idx + 1 ))
     done
 }
 
